@@ -7,33 +7,18 @@ html(lang="en")
         include layout/styles
         title Personal Portfolio Website 
     //- header
-    header
-        .container 
-            nav 
-                .logo
-                    h2 
-                        span !st
-                        |Agency
-                ul.links
-                    li.active  
-                        a.active(href="#") home 
-                    li  
-                        a(href="#") about us 
-                    li  
-                        a(href="#") blog 
-                    li  
-                        a(href="#") services 
-                    li  
-                        a(href="#") pages 
-                    li  
-                        a(href="#") contact us 
-            .intro 
-                span hello 
-                h1 my name is 
-                    span john doe
-                h2 Ceo | !st Agency
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                a(href="#") click here
-            .hero 
-                img(src="/dist/imgs/upper.png", alt="")     
+    include layout/header  
+    //- About Us
+    section.about-us 
+        .container
+            h2.section-title Who we are
+            .content 
+                .left-text
+                    h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                .right-text 
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            a(href="#") click here
+
+        
     body 

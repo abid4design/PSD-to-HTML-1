@@ -1,0 +1,32 @@
+.about-us{
+    @include paddingTopBottom;
+    background-color: $mainColor;
+    color: #fff;
+   
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+       
+        .left-text{
+            flex-basis:45%;
+            h3{
+                font-size: 20px;
+            }
+            p{
+                @extend .paragraph;
+            }
+        }
+        .right-text{
+            flex-basis:45%;
+            p{
+                @extend .paragraph;
+            }
+        }
+    }
+    a{
+        @include btn(#3b4374);
+         
+     } 
+}
