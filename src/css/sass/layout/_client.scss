@@ -1,0 +1,25 @@
+.client{
+    @include paddingTopBottom;
+    background-image: url('/dist/imgs/client-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    p{
+        @extend .paragraph;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .logos{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: $paddingTop;
+        .logo{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
