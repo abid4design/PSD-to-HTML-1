@@ -1,0 +1,78 @@
+.blog{
+    @include paddingTopBottom;
+    .blog-content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px 20px;
+        .heading{
+            text-align: left;
+            p{
+                margin-top: 30px;
+            }
+        }
+        .box{
+            &:nth-child(1){
+                grid-column: span 2;
+            }
+            &:nth-child(2){
+                grid-column: span 2;
+                grid-row: span 2;
+                background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url('/dist/imgs/blog.jpg');
+                background-position: center;
+                background-size: cover;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+                color: #fff;
+                padding: 30px;
+                div{
+                    text-align: center;
+                    h2{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            &:nth-child(3){
+                grid-column: span 2;
+                background-color: $mainColor;
+                padding: 30px;
+                color: #fff;
+                text-align: center;
+                p{
+                    margin-bottom: 30px;
+                }
+            }
+            &:nth-child(4), &:nth-child(5){
+                
+                padding: 20px 10px 40px 10px;
+                text-align: center;
+                span{
+                    margin-bottom: 30px;
+                    display: block;
+                }
+            }
+            &:nth-child(4){
+                background-color: #b9b8b8;
+            }
+            &:nth-child(5){
+                background-color: #000;
+                color: #fff;
+            }
+            &:nth-child(6){
+                grid-column: span 2;
+                background-color: #e91d62;
+                text-align:center;
+                padding: 20px 10px 40px 10px;
+                color: #fff;
+                h2{
+                    margin-bottom: 30px;
+                }
+            }
+            p{
+                @extend .paragraph;
+            }
+        }
+    }
+    
+}
