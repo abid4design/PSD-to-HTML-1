@@ -23,6 +23,9 @@
             display: flex;
             justify-content: space-between;
             padding: 10px;
+            @media (max-width: 778px) {
+                display: block;
+            }
             .icon{
                 margin-right: 20px;
                 i{

@@ -1,6 +1,6 @@
 .about-us{
     @include paddingTopBottom;
-    background-color: $mainColor;
+    background-color: var(--main-color);
     color: #fff;
    
     .content{
@@ -8,6 +8,9 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 50px;
+        @media (max-width: 778px) {
+            flex-direction: column;
+        }
        
         .left-text{
             flex-basis:45%;

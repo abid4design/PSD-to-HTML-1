@@ -4,6 +4,9 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px 20px;
+        @media (max-width: 778px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
         .heading{
             text-align: left;
             p{
@@ -35,7 +38,7 @@
             }
             &:nth-child(3){
                 grid-column: span 2;
-                background-color: $mainColor;
+                background-color: var(--main-color);
                 padding: 30px;
                 color: #fff;
                 text-align: center;

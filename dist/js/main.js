@@ -29,3 +29,29 @@ window.onscroll = function (e) {
     btn.parentNode.style.display = "block";
   }
 };
+// setting box toggle button
+let toggleButton = document.querySelector('.toggle-button')
+let settingsBox = document.querySelector('.settings-box')
+toggleButton.addEventListener('click', () => {
+    settingsBox.classList.toggle('opened');
+})
+
+let liColor = document.querySelectorAll('.settings-box ul li')
+liColor.forEach((li) => {
+    li.addEventListener('click', (e) => {
+        document.documentElement.style.setProperty('--main-color',e.target.dataset.color )
+        localStorage.setItem('Color_Option', e.target.dataset.color)
+    })
+})
+let colorOption = localStorage.getItem('Color_Option')
+if(colorOption !== null){
+  console.log(colorOption)
+  document.documentElement.style.setProperty('--main-color',colorOption )
+}
+// Toggle menu
+let toggleMunuButton = document.querySelector('.toggle-menu i')
+let linksMobile = document.querySelector(".links")
+console.log(toggleMunuButton)
+toggleMunuButton.addEventListener('click', (e) => {
+  linksMobile.classList.toggle('opened')
+})

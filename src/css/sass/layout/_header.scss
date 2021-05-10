@@ -6,16 +6,42 @@ header {
     background-size: cover;
     color: #fff;
     position: relative;
+    .toggle-menu{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        display: none;
+        @media (max-width: 778px) {
+            display: block;
+        }
+    }
     nav{
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 60px;
-        
         .links{
             display: flex;
             justify-content: space-between;
             flex-basis: 50%;
+            @media (max-width: 778px) {
+               
+                    background-color: var(--main-color);
+                    color: #fff;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    right: 20px;
+                    text-align: center;
+                    z-index: 1;
+                    display: none;
+                    &.opened{
+                        display: flex;;
+                    }
+            
+            }
             li{
                 a{
                     color: inherit;
@@ -31,7 +57,17 @@ header {
                             left: 0;
                             width: 100%;
                             height: 5px;
-                            background-color: $mainColor;
+                            background-color: var(--main-color);
+                        }
+                    }
+                    @media (max-width: 778px) {
+                        &.active,&:hover{
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                
+                                height: 0;
+                            }
                         }
                     }
                 }
@@ -40,53 +76,61 @@ header {
         .logo{
             
             span{
-                color: $mainColor;
+                color: var(--main-color);
                 margin-right: 10px;
-                
             }
     }
     }
+        
     .intro{
         width: 40%;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        &>span{
-            font-size: 40px;
-            font-family: 'Leckerli One', cursive;
-            text-transform: capitalize;
+        @media (max-width: 778px) {
+            width: 100%;
         }
-        h1{
-            font-size: 45px;
-            text-transform: capitalize;
-            margin-top: 10px;
-            span{
-                color: $mainColor;
+        .title{
+            @media (max-width: 778px) {
+                text-align: center;
+            }
+            &>span{
+                font-size: 40px;
+                font-family: 'Leckerli One', cursive;
+                text-transform: capitalize;
+            }
+            h1{
+                font-size: 45px;
+                text-transform: capitalize;
+                margin-top: 10px;
+                span{
+                    color: var(--main-color);
+                }
+            }
+            h2{
+                font-size: 25px;
             }
         }
-        h2{
-            font-size: 25px;
-        }    
         p{
             @extend .paragraph;
             margin-bottom: 60px;
             margin-top: 40px;
         } 
         a{
-           @include btn();
-            
+            @include btn();
         }   
-        
-
     }
     .hero{
         width: 40%;
         position: absolute;
         top: 15%;
         right: 5%;
+        @media (max-width: 778px) {
+            display: none;
+        }
         img{
             width: 100%;
         }
     }
-       
 }
+    

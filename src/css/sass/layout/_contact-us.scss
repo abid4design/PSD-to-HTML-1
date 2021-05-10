@@ -8,6 +8,9 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         gap: 20px 20px;
+        @media (max-width: 778px) {
+           display: block;
+        }
         .left-box{
             .heading{
                 text-align: left;
@@ -19,6 +22,9 @@
                 margin-bottom: 30px;
                 width: 60%;
                 font-size: 15px;
+                @media (max-width: 778px) {
+                    display: initial;
+                }
                 .icon{
                     text-align: center;
                     width: 50px;
@@ -36,17 +42,28 @@
             }
         }
         .right-box{
+            @media (max-width: 778px) {
+                display: block;
+            }
             .heading{
                 text-align: left;
                 display: flex;
                 flex-direction: column-reverse;
+                
             }
             form{
+                @media (max-width: 778px) {
+                    width: 100%;
+                }
                 .form-control{
                     margin-bottom: 20px;
                     display:flex;
                     justify-content: space-between;
                     align-items: center;
+                    @media (max-width: 778px) {
+                        display: block;
+                        width: 100%
+                    }
                     &:nth-child(4){
                         align-items:initial;
                     }
@@ -112,8 +129,8 @@
             transition: all .3s;
             cursor: pointer;
             &:hover{
-                border-color: $mainColor;
-                background-color: $mainColor;
+                border-color: var(--main-color);
+                background-color: var(--main-color);
             }
         }
     }
